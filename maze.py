@@ -526,7 +526,7 @@ if __name__ == '__main__':
 
             if event.type == pg.USEREVENT:
                 if event.user_type == pg_gui.UI_BUTTON_PRESSED:
-                    if event.ui_element == start and name is not None:  # нажатие на кнопку 'Начать игру'
+                    if event.ui_element == start and name is not None and continue_unfinished is False:  # нажатие на кнопку 'Начать игру'  
                         # перед этим нужно обязательно ввести имя
                         start_screen_render = False
                         pg.time.set_timer(ENEMY_EVENT_TYPE, 300)  # разрешение врагу двигаться
